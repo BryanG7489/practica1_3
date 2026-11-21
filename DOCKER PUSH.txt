@@ -1,0 +1,14 @@
+DOCKER PUSH
+
+PS C:\Users\anony\Documents\Practicas Microservicios\catalog-service> docker push bryang7489/catalog-service:1.0.0
+The push refers to repository [docker.io/bryang7489/catalog-service]
+76e4655e321f: Pushed
+24a69b5172a7: Pushed
+44136fa355b3: Already exists
+7aa16eb25eec: Pushed
+14c023ce2193: Pushed
+70f9f138728e: Pushed
+82d837080d76: Pushed
+718609196069: Pushed
+1.0.0: digest: sha256:80672438c98540e7fc8b4fc200322ef7e8dc3c94be9c347e1fae7bbf0bf485ee size: 856
+PS C:\Users\anony\Documents\Practicas Microservicios\catalog-service>

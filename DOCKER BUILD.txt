@@ -1,0 +1,30 @@
+DOCKER BUILD
+
+PS C:\Users\anony\Documents\Practicas Microservicios\catalog-service> docker build -t bryang7489/catalog-service:1.0.0 .
+[+] Building 63.4s (10/10) FINISHED                                                                docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 710B                                                                               0.0s
+ => [internal] load metadata for registry.access.redhat.com/ubi9/openjdk-25-runtime:1.24                           2.1s
+ => [internal] load .dockerignore                                                                                  0.1s
+ => => transferring context: 486B                                                                                  0.0s
+ => [1/5] FROM registry.access.redhat.com/ubi9/openjdk-25-runtime:1.24@sha256:408a999ab63b12697eb6d16d5c54b98373  37.0s
+ => => resolve registry.access.redhat.com/ubi9/openjdk-25-runtime:1.24@sha256:408a999ab63b12697eb6d16d5c54b983733  0.1s
+ => => sha256:7aa16eb25eecc18426912139220f2a4f7268e4921f3768cdb9f64570977377a9 40.68MB / 40.68MB                  19.4s
+ => => sha256:76e4655e321f4cc76a8b0552b56d7e49840312c1e3d8dd47b6c6e53b4f3c0134 111.38MB / 111.38MB                18.6s
+ => => extracting sha256:7aa16eb25eecc18426912139220f2a4f7268e4921f3768cdb9f64570977377a9                          5.8s
+ => => extracting sha256:76e4655e321f4cc76a8b0552b56d7e49840312c1e3d8dd47b6c6e53b4f3c0134                         11.4s
+ => [internal] load build context                                                                                  0.2s
+ => => transferring context: 13.45kB                                                                               0.1s
+ => [2/5] COPY --chown=185 target/quarkus-app/lib/ /deployments/lib/                                               1.8s
+ => [3/5] COPY --chown=185 target/quarkus-app/*.jar /deployments/                                                  0.2s
+ => [4/5] COPY --chown=185 target/quarkus-app/app/ /deployments/app/                                               0.2s
+ => [5/5] COPY --chown=185 target/quarkus-app/quarkus/ /deployments/quarkus/                                       0.2s
+ => exporting to image                                                                                            21.1s
+ => => exporting layers                                                                                            2.7s
+ => => exporting manifest sha256:0212dc8d5cdd9f7da61f2320763ce300371bd57952639f6c7a56346bac14cd79                  0.1s
+ => => exporting config sha256:4afb0558ec27ab0b28e9bae198436ac835e2731a149aac4da60c13fe671c7fcc                    0.1s
+ => => exporting attestation manifest sha256:ee1d82e7e9fa7c2f05cebc377eb4cec8d94957562956478d6138ded68e0f6152      0.1s
+ => => exporting manifest list sha256:80672438c98540e7fc8b4fc200322ef7e8dc3c94be9c347e1fae7bbf0bf485ee             0.1s
+ => => naming to docker.io/bryang7489/catalog-service:1.0.0                                                        0.0s
+ => => unpacking to docker.io/bryang7489/catalog-service:1.0.0                                                    18.0s
+PS C:\Users\anony\Documents\Practicas Microservicios\catalog-service>
