@@ -1,0 +1,5 @@
+El flujo inicia con el build local, compilando el código con Maven y empaquetándolo con Docker en la imagen bryang7489/catalog-service:1.0.0. Posteriormente, mediante el push a Docker Hub, la imagen se publica en un registro remoto accesible desde cualquier nodo o entorno.
+
+En la fase de declaración en Kubernetes, el manifiesto k8s/01-deployment.yaml define el estado deseado: especifica la imagen remota a utilizar y configura las sondas readinessProbe y livenessProbe. Al ejecutar kubectl apply, el clúster descarga automáticamente la imagen desde Docker Hub (si no existe localmente) y despliega el contenedor.
+
+Una vez en ejecución, Kubernetes automatiza la supervisión: consulta /ready cada 5 segundos para decidir si el pod puede recibir tráfico y /live cada 10 segundos para verificar que el proceso siga activo. Esto marca el paso de la validación manual con curl del laboratorio 1.1 a la verificación declarativa y autónoma del laboratorio 1.3. Contar con estas sondas permite que Kubernetes detecte fallos y reemplace pods dañados sin intervención humana, consolidando el estándar de resiliencia y automatización en pipelines CI/CD profesionales.
